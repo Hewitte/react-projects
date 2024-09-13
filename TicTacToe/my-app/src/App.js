@@ -12,7 +12,7 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
-    const nextSquares = squares.slice();
+    const nextSquares = squares.slice(); //.slice creates a copy of the array instead of modifying the OG
     nextSquares[i] = "X";
     setSquares(nextSquares);
   }
